@@ -31,6 +31,7 @@ public class TellerServiceImpl implements TellerService {
         newTeller.setFirstName(createTellerDto.getFirstName());
         newTeller.setLastName(createTellerDto.getLastName());
         newTeller.setPhoneNumber(createTellerDto.getPhoneNumber());
+
         newTeller.setPassword(passwordEncoder.encode(createTellerDto.getPassword()));
 
         return tellerRepo.save(newTeller);

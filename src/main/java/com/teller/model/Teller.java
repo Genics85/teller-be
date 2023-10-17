@@ -19,7 +19,6 @@ public class Teller {
     private String email;
     @Column(unique = true)
     private String phoneNumber;
-    @Transient
     private String password;
     @DateTimeFormat
     private LocalDateTime date = LocalDateTime.now();
